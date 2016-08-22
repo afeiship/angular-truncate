@@ -27,7 +27,7 @@ var config = {
 
 var scripts = [
   './src/angular/main.js',
-  './src/angular/directive/truncate.js',
+  './src/angular/filter/truncate.js',
   './src/angular/service/truncate.js'
 ];
 

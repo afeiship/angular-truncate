@@ -5,7 +5,6 @@
   <title>truncate DEMO PAGE</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <meta content="telephone=no" name="format-detection"/>
-  <link rel="stylesheet" type="text/css" href="../dist/css/truncate.css"/>
   <style type="text/css">
     body {
       font-family: 'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
@@ -18,8 +17,11 @@
   </style>
 </head>
 <body ng-controller="MainCtrl as vm" ng-cloak>
-
-
+<p>{{vm.text1 | nxTruncate:25}}</p>
+<p>{{vm.text1 | nxTruncate:20}}</p>
+<p>{{vm.text1 | nxTruncate:15}}</p>
+<p>{{vm.text1 | nxTruncate:10}}</p>
+<p>{{vm.text1 | nxTruncate:5}}</p>
 
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="../bower_components/angular-module-stiffener/dist/angular-module-stiffener.js"></script>
@@ -28,6 +30,7 @@
   var TestModule = angular.module('TestApp', ['nx.widget'])
     .controller('MainCtrl', function ($scope) {
       var vm = this;
+      vm.text1='我是一段段很长很长的文字，但是你只想让我显示20字';
       //You directive demo code goes here!
     });
 </script>
